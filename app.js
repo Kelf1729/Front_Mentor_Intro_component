@@ -18,7 +18,7 @@ btn.addEventListener("click", (event) => {
       forms[i].nextElementSibling.classList.remove("active");
       forms[i].classList.remove("input_active");
     }
-    if (i == 2) {
+    if (i == 2 && !forms[2].value == "") {
       if (!emailRegex.test(forms[2].value)) {
         forms[2].nextElementSibling.innerText =
           "Looks like this is not an email";

@@ -40,8 +40,8 @@ Mobile
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Kelf1729/Front_Mentor_Intro_component.git)
+- Live Site URL: [Add live site URL here](https://kelf1729.github.io/Front_Mentor_Intro_component/)
 
 ## My process
 
