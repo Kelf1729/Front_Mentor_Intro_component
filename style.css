@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins";
+}
+
+body {
+  min-height: 100vh;
+  background: url(/images/bg-intro-desktop.png);
+  background-color: hsl(0, 100%, 74%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 300px;
+  gap: 40px;
+}
+@media screen and (max-width: 376px) {
+  body {
+    grid-template-columns: 1fr;
+    padding: 10px 15px;
+  }
+}
+body .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 376px) {
+  body .left {
+    text-align: center;
+  }
+}
+body .left h1 {
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 376px) {
+  body .left h1 {
+    font-size: 2rem;
+  }
+}
+body .left p {
+  color: #fff;
+}
+body .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .right .btn-1 {
+  padding: 20px 0px;
+  border: none;
+  cursor: pointer;
+  background-color: hsl(248, 32%, 49%);
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+body .right .btn-1 span {
+  font-weight: 700;
+}
+body .right form {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+}
+body .right form input {
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 2px solid gray;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+body .right form .input_active {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+body .right form label {
+  visibility: hidden;
+  color: hsl(0, 100%, 74%);
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+body .right form .active {
+  visibility: visible;
+}
+body .right form .btn-2 {
+  padding: 20px 0px;
+  border: none;
+  cursor: pointer;
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+body .right form p {
+  font-size: 0.65rem;
+  text-align: center;
+  color: gray;
+  font-weight: 600;
+}
+body .right form p span {
+  color: hsl(0, 100%, 74%);
+}
+
+/*# sourceMappingURL=style.css.map */

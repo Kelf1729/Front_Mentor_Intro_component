@@ -1,0 +1,123 @@
+// Reset
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins";
+}
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+// Colors
+$primary-red: hsl(0, 100%, 74%);
+$primary-green: hsl(154, 59%, 51%);
+$primary-blue: hsl(248, 32%, 49%);
+
+$neutral-dark: hsl(249, 10%, 26%);
+$neutral-light: hsl(246, 25%, 77%);
+// Mobile
+$mobile: 376px;
+@mixin d($size) {
+  @if $size == m {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
+}
+// Site
+body {
+  min-height: 100vh;
+  background: url(/images/bg-intro-desktop.png);
+  background-color: $primary-red;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 300px;
+  gap: 40px;
+  @include d(m) {
+    grid-template-columns: 1fr;
+    padding: 10px 15px;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include d(m) {
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 20px;
+      @include d(m) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      color: #fff;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .btn-1 {
+      padding: 20px 0px;
+      border: none;
+      cursor: pointer;
+      background-color: $primary-blue;
+      color: #fff;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      span {
+        font-weight: 700;
+      }
+    }
+    form {
+      display: flex;
+      padding: 20px;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 10px;
+      input {
+        padding: 15px 20px;
+        border-radius: 10px;
+        border: 2px solid gray;
+        text-transform: capitalize;
+        font-weight: 700;
+      }
+      .input_active {
+        border: 2px solid $primary-red;
+      }
+      label {
+        visibility: hidden;
+        color: $primary-red;
+        align-self: flex-end;
+        margin-right: 20px;
+        margin-bottom: 10px;
+      }
+      // For label message
+      .active {
+        visibility: visible;
+      }
+      .btn-2 {
+        padding: 20px 0px;
+        border: none;
+        cursor: pointer;
+        background-color: $primary-green;
+        color: #fff;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      p {
+        font-size: 0.65rem;
+        text-align: center;
+        color: gray;
+        font-weight: 600;
+        span {
+          color: $primary-red;
+        }
+      }
+    }
+  }
+}
